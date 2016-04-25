@@ -1,12 +1,7 @@
-#include <stdio.h>
+#include "operaciones.h"
 
-/*Obtiene la derivada de dos polinomios multiplicados*/
-
-int imprime_mon(int base, int exp, int p_mon);    /*Función que imprime un monomio, recibe su base,
-											exponente y p_mon cambia a 1 si ha recibido el primer
-											monomio del polinomio, el del exponente mayor, eso para 
-											cuando el primer monomio es positivo no imprimir '+'  */
-											
+/*Obtiene la derivada de la multiplicación de dos polinomios*/
+				
 int main(){
 
 
@@ -289,38 +284,5 @@ int main(){
     
 	return 0;
 
-}
-////////////////////1
-
-int imprime_mon(int base, int exp, int nepm) {
-	
-	
-	    if (nepm!=0 && base>0)
-	        printf("+");
-	    
-	    if(base!=0 && base!=1 && base!=-1){
-	        printf("%d", base); 
-	    
-	    }
-	    
-	    if(base==-1 && base!=0){
-	        printf("-"); 
-	    
-	    }
-	    
-	    if(exp>=2 && base!=0){
-	        printf("x^%d", exp);
-	       
-	    }
-	    
-	    if(exp==1 && base!=0){
-	        printf("x");
-	        
-	    }
-	
-	    if(exp==0 && (base==1 || base==-1)){
-	        printf("1");
-	        
-	    }   
 }
 
